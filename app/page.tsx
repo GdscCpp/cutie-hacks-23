@@ -35,6 +35,7 @@ export default function Home() {
   });
 
   const [map, setMap] = useState<null | google.maps.Map>();
+  const [loadedLocation, setLoadedLocation] = useState(false);
   const [location, setLocation] = useState<google.maps.LatLngLiteral>();
 
   const onLoad = useCallback(function callback(map: google.maps.Map) {
@@ -49,18 +50,27 @@ export default function Home() {
     setMap(null);
   }, []);
 
+  const setCurrentLocation = () => {
+    navigator.geolocation.getCurrentPosition(({ coords }) => {
+      const { latitude, longitude } = coords;
+      setLocation({ lat: latitude, lng: longitude });
+      if (map) {
+        map.moveCamera({ center: location });
+        if (location && location != center) {
+          setLoadedLocation(true);
+        }
+      }
+    });
+  };
+
   useEffect(() => {
     if ("geolocation" in navigator) {
       // Retrieve latitude & longitude coordinates from `navigator.geolocation` Web API
-      navigator.geolocation.getCurrentPosition(({ coords }) => {
-        const { latitude, longitude } = coords;
-        setLocation({ lat: latitude, lng: longitude });
-        if (map) {
-          map.moveCamera({ center: location });
-        }
-      });
+      if (!loadedLocation) {
+        setCurrentLocation();
+      }
     }
-  }, [map]);
+  });
 
   return (
     <main className={"w-screen h-screen"}>
@@ -72,7 +82,6 @@ export default function Home() {
           options={OPTIONS}
         >
           <Marker position={location!} animation={google.maps.Animation.DROP} />
-
           {pois.map((poi, index) => {
             return (
               <Marker
@@ -89,6 +98,15 @@ export default function Home() {
           })}
         </GoogleMap>
       )}
+      <div className="fixed right-0 bottom-[150px] hover:border-white border-2 rounded-full">
+        <button
+          className="btn bg-transparent border-none hover:bg-transparent"
+          onClick={setCurrentLocation}
+        >
+          <img src={marker.src} />
+        </button>
+      </div>
+
       <Card pois={pois} map={map!} />
     </main>
   );
