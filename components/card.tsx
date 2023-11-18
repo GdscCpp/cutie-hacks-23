@@ -9,7 +9,7 @@ interface CardProps {
 
 export default function Card({ map, pois }: CardProps) {
   return (
-    <div className="card w-full bg-white shadow-xl fixed bottom-0">
+    <div className="card w-full bg-white shadow-xl fixed bottom-10">
       <div className="card-body items-center text-center">
         <h2 className="card-title">Nearby Locations</h2>
         <div className="flex flex-row">

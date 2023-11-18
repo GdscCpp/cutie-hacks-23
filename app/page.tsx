@@ -5,6 +5,8 @@ import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 import { center } from "@/lib/location";
 import Card from "@/components/card";
 import marker from "@/public/marker.svg";
+import currentLocation from "@/public/current-location.svg";
+import BottomBar from "@/components/bottom-bar";
 
 const containerStyle: CSSProperties = {
   width: "100%",
@@ -73,7 +75,7 @@ export default function Home() {
   });
 
   return (
-    <main className={"w-screen h-screen"}>
+    <div className={"w-screen h-screen"}>
       {isLoaded && (
         <GoogleMap
           mapContainerStyle={containerStyle}
@@ -98,16 +100,17 @@ export default function Home() {
           })}
         </GoogleMap>
       )}
-      <div className="fixed right-0 bottom-[150px] hover:border-white border-2 rounded-full">
+      <div className="fixed right-0 bottom-[200px]">
         <button
-          className="btn bg-transparent border-none hover:bg-transparent"
+          className="btn border-none bg-white rounded-full"
           onClick={setCurrentLocation}
         >
-          <img src={marker.src} />
+          <img src={currentLocation.src} />
         </button>
       </div>
 
       <Card pois={pois} map={map!} />
-    </main>
+      <BottomBar />
+    </div>
   );
 }
