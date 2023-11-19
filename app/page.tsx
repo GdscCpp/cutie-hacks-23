@@ -377,6 +377,7 @@ export default function Home() {
               <Marker
                 label={{
                   text: poi.name,
+                  color: "white",
                 }}
                 position={poi.location}
                 icon={{
@@ -389,13 +390,9 @@ export default function Home() {
           {blue_lights.map((poi, index) => {
             return (
               <Marker
-                label={{
-                  text: poi.name,
-                }}
                 position={poi.location}
                 icon={{
                   url: marker.src,
-                  labelOrigin: new google.maps.Point(5, 30),
                 }}
               />
             );
@@ -404,7 +401,7 @@ export default function Home() {
       )}
       <div className="fixed right-0 bottom-[200px]">
         <button
-          className="btn border-none bg-white rounded-full"
+          className="btn border-none bg-white rounded-full hover:bg-info"
           onClick={setCurrentLocation}
         >
           <img src={currentLocation.src} />

@@ -1,6 +1,5 @@
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useState } from "react";
-import { useFirestoreCollectionData } from "reactfire";
 
 export default function AddEventModal() {
   const firestore = getFirestore();
@@ -22,9 +21,10 @@ export default function AddEventModal() {
   return (
     <>
       <button
+        className="p-4 rounded-full bg-secondary text-white fixed bottom-14 right-10 border-none"
         onClick={() => document.getElementById("my_modal_1")?.showModal()}
       >
-        Open Modal
+        +
       </button>
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box bg-white">
@@ -34,20 +34,22 @@ export default function AddEventModal() {
               <input
                 type="text"
                 placeholder="Attendee Name"
-                className="input w-full max-w-xs"
+                className="input w-full max-w-xs mb-4"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
               />
               <input
                 type="text"
                 placeholder="Location"
-                className="input w-full max-w-xs"
+                className="input w-full max-w-xs mb-4"
                 onChange={(e) => setPLace(e.target.value)}
                 value={place}
               />
               <br />
 
-              <button className="btn">Check in</button>
+              <button className="btn bg-secondary hover:bg-secondary border-info">
+                Check in
+              </button>
             </form>
           </div>
         </div>

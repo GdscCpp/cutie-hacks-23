@@ -11,9 +11,9 @@ export default function Poi({ name, location, map }: PoiProps) {
     map!.panTo(location);
   };
   return (
-    <button className="btn flex-inline" onClick={navigateToLocation}>
+    <button className="rounded-full bg-primary m-3 flex text-white p-4" onClick={navigateToLocation}>
       <img src={marker.src} />
-      {name}
+      <p className="ml-2">{name}</p>
     </button>
   );
 }

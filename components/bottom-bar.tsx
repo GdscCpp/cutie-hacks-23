@@ -13,7 +13,7 @@ export default function BottomBar() {
       <Link href={"./home"} className="btn bg-transparent border-none">
         <img src={home.src} />
       </Link>
-      <Link href={"./"} className="btn bg-transparent border-none">
+      <Link href={"./settings"} className="btn bg-transparent border-none">
         <img src={settings.src} />
       </Link>
     </div>
