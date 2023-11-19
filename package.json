@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-google-maps/api": "2.19.2",
+    "firebase": "10.6.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",

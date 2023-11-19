@@ -1,25 +1,24 @@
 "use client";
 
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-import { FirebaseAppProvider } from 'reactfire'
-import firebaseConfig from '@/config/firebase'
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { FirebaseAppProvider } from "reactfire";
+import firebaseConfig from "@/config/firebase";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <FirebaseAppProvider firebaseConfig={firebaseConfig}>
-          {children}
-        </FirebaseAppProvider>
-      </body>
-    </html>
-  )
+    <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+      <html lang="en">
+        <body className={`${inter.className} bg-primary w-screen h-screen`}>{children}</body>
+      </html>
+    </FirebaseAppProvider>
+  );
 }
+
+
