@@ -7,6 +7,7 @@ import Card from "@/components/card";
 import marker from "@/public/marker.svg";
 import currentLocation from "@/public/current-location.svg";
 import BottomBar from "@/components/bottom-bar";
+import Link from "next/link";
 
 const containerStyle: CSSProperties = {
   width: "100%",
@@ -55,14 +56,14 @@ const blue_lights = [
   {
     name: "",
     location: {
-      lat: 34.055340,
+      lat: 34.05534,
       lng: -117.829192,
     },
   },
   {
     name: "",
     location: {
-      lat: 34.055340,
+      lat: 34.05534,
       lng: -117.829192,
     },
   },
@@ -252,7 +253,7 @@ const blue_lights = [
     name: "",
     location: {
       lat: 34.055684,
-      lng: -117.820140,
+      lng: -117.82014,
     },
   },
   {
@@ -294,7 +295,7 @@ const blue_lights = [
     name: "",
     location: {
       lat: 34.052977,
-      lng: -117.815790,
+      lng: -117.81579,
     },
   },
   {
@@ -311,12 +312,7 @@ const blue_lights = [
       lng: -117.818268,
     },
   },
-]
-
-
-
-
-
+];
 
 export default function Home() {
   const { isLoaded } = useJsApiLoader({
@@ -374,38 +370,52 @@ export default function Home() {
           <Marker position={location!} animation={google.maps.Animation.DROP} />
           {pois.map((poi, index) => {
             return (
-              <Marker
-                label={{
-                  text: poi.name,
-                  color: "white",
-                }}
-                position={poi.location}
-                icon={{
-                  url: marker.src,
-                  labelOrigin: new google.maps.Point(5, 30),
-                }}
-              />
+              <div key={index}>
+                <Marker
+                  label={{
+                    text: poi.name,
+                    color: "white",
+                  }}
+                  position={poi.location}
+                  icon={{
+                    url: marker.src,
+                    labelOrigin: new google.maps.Point(5, 30),
+                  }}
+                />
+              </div>
             );
           })}
+
           {blue_lights.map((poi, index) => {
             return (
-              <Marker
-                position={poi.location}
-                icon={{
-                  url: marker.src,
-                }}
-              />
+              <div key={index}>
+                <Marker
+                  position={poi.location}
+                  icon={{
+                    url: marker.src,
+                  }}
+                />
+              </div>
             );
           })}
         </GoogleMap>
       )}
-      <div className="fixed right-0 bottom-[200px]">
+      <div className="fixed right-0 bottom-[230px]">
         <button
           className="btn border-none bg-white rounded-full hover:bg-info"
           onClick={setCurrentLocation}
         >
           <img src={currentLocation.src} />
         </button>
+      </div>
+      <div className="fixed left-0 bottom-[250px]">
+        <Link
+          href="./call-button"
+          className="border-none text-center p-5 bg-error rounded-full hover:bg-info"
+          onClick={setCurrentLocation}
+        >
+          Call Campus Police
+        </Link>
       </div>
 
       <Card pois={pois} map={map!} />

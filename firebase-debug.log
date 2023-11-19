@@ -1,0 +1,253 @@
+[debug] [2023-11-19T02:18:12.275Z] ----------------------------------------------------------------------
+[debug] [2023-11-19T02:18:12.277Z] Command:       /usr/local/bin/firebase /home/bryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-11-19T02:18:12.277Z] CLI Version:   12.9.1
+[debug] [2023-11-19T02:18:12.277Z] Platform:      linux
+[debug] [2023-11-19T02:18:12.277Z] Node Version:  v16.16.0
+[debug] [2023-11-19T02:18:12.277Z] Time:          Sat Nov 18 2023 18:18:12 GMT-0800 (Pacific Standard Time)
+[debug] [2023-11-19T02:18:12.278Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-19T02:18:12.323Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-19T02:18:12.323Z] > authorizing via signed-in user (bryan.l.bergo@gmail.com)
+[debug] [2023-11-19T02:18:12.323Z] [iam] checking project cutie-hacks-23 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-19T02:18:12.325Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions [none]
+[debug] [2023-11-19T02:18:12.325Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions x-goog-quota-user=projects/cutie-hacks-23
+[debug] [2023-11-19T02:18:12.325Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:18:12.554Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions 200
+[debug] [2023-11-19T02:18:12.554Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:18:12.555Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 [none]
+[debug] [2023-11-19T02:18:12.822Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 200
+[debug] [2023-11-19T02:18:12.822Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 {"projectId":"cutie-hacks-23","projectNumber":"1053216282180","displayName":"Cutie Hacks 23","name":"projects/cutie-hacks-23","resources":{"hostingSite":"cutie-hacks-23"},"state":"ACTIVE","etag":"1_e592c4a5-9354-464b-8859-577e916f31c3"}
+[debug] [2023-11-19T02:18:14.191Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites pageToken=&pageSize=10
+[debug] [2023-11-19T02:18:15.519Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites 200
+[debug] [2023-11-19T02:18:15.520Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites {"sites":[{"name":"projects/cutie-hacks-23/sites/cutie-hacks-23","defaultUrl":"https://cutie-hacks-23.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-19T02:18:15.520Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites 
+[debug] [2023-11-19T02:18:16.133Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites 200
+[debug] [2023-11-19T02:18:16.133Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites {"sites":[{"name":"projects/cutie-hacks-23/sites/cutie-hacks-23","defaultUrl":"https://cutie-hacks-23.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-19T02:18:16.133Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23/webApps/-/config [none]
+[debug] [2023-11-19T02:18:16.669Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23/webApps/-/config 200
+[debug] [2023-11-19T02:18:16.670Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23/webApps/-/config {"projectId":"cutie-hacks-23","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","storageBucket":"cutie-hacks-23.appspot.com","apiKey":"AIzaSyDEdk_G0fOj2WEs94heXNFzTYZGMn-FCdM","authDomain":"cutie-hacks-23.firebaseapp.com","messagingSenderId":"1053216282180","measurementId":"G-901MGK29GX"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] unhandledRejection ReferenceError: Headers is not defined
+    at Object.<anonymous> (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/web/spec-extension/adapters/headers.js:32:30)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.require (pkg/prelude/bootstrap.js:1851:31)
+    at Module.mod.require (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:102:18)
+
+[debug] [2023-11-19T02:18:20.080Z] Error: ENOENT: no such file or directory, open '/home/bryan/Documents/cutie-hacks-23/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-11-19T02:19:30.264Z] ----------------------------------------------------------------------
+[debug] [2023-11-19T02:19:30.266Z] Command:       /usr/local/bin/firebase /home/bryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-11-19T02:19:30.266Z] CLI Version:   12.9.1
+[debug] [2023-11-19T02:19:30.266Z] Platform:      linux
+[debug] [2023-11-19T02:19:30.266Z] Node Version:  v16.16.0
+[debug] [2023-11-19T02:19:30.266Z] Time:          Sat Nov 18 2023 18:19:30 GMT-0800 (Pacific Standard Time)
+[debug] [2023-11-19T02:19:30.266Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-19T02:19:30.313Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-19T02:19:30.313Z] > authorizing via signed-in user (bryan.l.bergo@gmail.com)
+[debug] [2023-11-19T02:19:30.313Z] [iam] checking project cutie-hacks-23 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-19T02:19:30.314Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions [none]
+[debug] [2023-11-19T02:19:30.314Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions x-goog-quota-user=projects/cutie-hacks-23
+[debug] [2023-11-19T02:19:30.315Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:19:30.551Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions 200
+[debug] [2023-11-19T02:19:30.551Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:19:30.552Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 [none]
+[debug] [2023-11-19T02:19:30.841Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 200
+[debug] [2023-11-19T02:19:30.841Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 {"projectId":"cutie-hacks-23","projectNumber":"1053216282180","displayName":"Cutie Hacks 23","name":"projects/cutie-hacks-23","resources":{"hostingSite":"cutie-hacks-23"},"state":"ACTIVE","etag":"1_e592c4a5-9354-464b-8859-577e916f31c3"}
+[debug] [2023-11-19T02:19:32.123Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites pageToken=&pageSize=10
+[debug] [2023-11-19T02:19:32.775Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites 200
+[debug] [2023-11-19T02:19:32.775Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites {"sites":[{"name":"projects/cutie-hacks-23/sites/cutie-hacks-23","defaultUrl":"https://cutie-hacks-23.web.app","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-19T02:19:32.776Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config [none]
+[debug] [2023-11-19T02:19:33.317Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config 200
+[debug] [2023-11-19T02:19:33.317Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config {"projectId":"cutie-hacks-23","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","storageBucket":"cutie-hacks-23.appspot.com","apiKey":"AIzaSyDEdk_G0fOj2WEs94heXNFzTYZGMn-FCdM","authDomain":"cutie-hacks-23.firebaseapp.com","messagingSenderId":"1053216282180","measurementId":"G-901MGK29GX"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] unhandledRejection ReferenceError: Headers is not defined
+    at Object.<anonymous> (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/web/spec-extension/adapters/headers.js:32:30)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.require (pkg/prelude/bootstrap.js:1851:31)
+    at Module.mod.require (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:102:18)
+
+[debug] [2023-11-19T02:19:36.685Z] Error: ENOENT: no such file or directory, open '/home/bryan/Documents/cutie-hacks-23/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-11-19T02:20:14.233Z] ----------------------------------------------------------------------
+[debug] [2023-11-19T02:20:14.234Z] Command:       /usr/local/bin/firebase /home/bryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-11-19T02:20:14.234Z] CLI Version:   12.9.1
+[debug] [2023-11-19T02:20:14.234Z] Platform:      linux
+[debug] [2023-11-19T02:20:14.234Z] Node Version:  v16.16.0
+[debug] [2023-11-19T02:20:14.234Z] Time:          Sat Nov 18 2023 18:20:14 GMT-0800 (Pacific Standard Time)
+[debug] [2023-11-19T02:20:14.234Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-19T02:20:14.280Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-19T02:20:14.281Z] > authorizing via signed-in user (bryan.l.bergo@gmail.com)
+[debug] [2023-11-19T02:20:14.281Z] [iam] checking project cutie-hacks-23 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-19T02:20:14.282Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions [none]
+[debug] [2023-11-19T02:20:14.282Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions x-goog-quota-user=projects/cutie-hacks-23
+[debug] [2023-11-19T02:20:14.282Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:20:14.513Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions 200
+[debug] [2023-11-19T02:20:14.513Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:20:14.514Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 [none]
+[debug] [2023-11-19T02:20:14.793Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 200
+[debug] [2023-11-19T02:20:14.793Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 {"projectId":"cutie-hacks-23","projectNumber":"1053216282180","displayName":"Cutie Hacks 23","name":"projects/cutie-hacks-23","resources":{"hostingSite":"cutie-hacks-23"},"state":"ACTIVE","etag":"1_e592c4a5-9354-464b-8859-577e916f31c3"}
+[debug] [2023-11-19T02:20:16.044Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites pageToken=&pageSize=10
+[debug] [2023-11-19T02:20:16.671Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites 200
+[debug] [2023-11-19T02:20:16.671Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites {"sites":[{"name":"projects/cutie-hacks-23/sites/cutie-hacks-23","defaultUrl":"https://cutie-hacks-23.web.app","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-19T02:20:16.671Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config [none]
+[debug] [2023-11-19T02:20:17.104Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config 200
+[debug] [2023-11-19T02:20:17.104Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config {"projectId":"cutie-hacks-23","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","storageBucket":"cutie-hacks-23.appspot.com","apiKey":"AIzaSyDEdk_G0fOj2WEs94heXNFzTYZGMn-FCdM","authDomain":"cutie-hacks-23.firebaseapp.com","messagingSenderId":"1053216282180","measurementId":"G-901MGK29GX"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] unhandledRejection ReferenceError: Headers is not defined
+    at Object.<anonymous> (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/web/spec-extension/adapters/headers.js:32:30)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.require (pkg/prelude/bootstrap.js:1851:31)
+    at Module.mod.require (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:102:18)
+
+[debug] [2023-11-19T02:20:20.536Z] Error: ENOENT: no such file or directory, open '/home/bryan/Documents/cutie-hacks-23/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-11-19T02:21:36.691Z] ----------------------------------------------------------------------
+[debug] [2023-11-19T02:21:36.693Z] Command:       /usr/local/bin/firebase /home/bryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-11-19T02:21:36.693Z] CLI Version:   12.9.1
+[debug] [2023-11-19T02:21:36.693Z] Platform:      linux
+[debug] [2023-11-19T02:21:36.693Z] Node Version:  v16.16.0
+[debug] [2023-11-19T02:21:36.693Z] Time:          Sat Nov 18 2023 18:21:36 GMT-0800 (Pacific Standard Time)
+[debug] [2023-11-19T02:21:36.693Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-19T02:21:36.742Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-19T02:21:36.742Z] > authorizing via signed-in user (bryan.l.bergo@gmail.com)
+[debug] [2023-11-19T02:21:36.742Z] [iam] checking project cutie-hacks-23 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-19T02:21:36.744Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions [none]
+[debug] [2023-11-19T02:21:36.744Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions x-goog-quota-user=projects/cutie-hacks-23
+[debug] [2023-11-19T02:21:36.744Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:21:36.964Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions 200
+[debug] [2023-11-19T02:21:36.964Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:21:36.964Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 [none]
+[debug] [2023-11-19T02:21:37.183Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 200
+[debug] [2023-11-19T02:21:37.184Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 {"projectId":"cutie-hacks-23","projectNumber":"1053216282180","displayName":"Cutie Hacks 23","name":"projects/cutie-hacks-23","resources":{"hostingSite":"cutie-hacks-23"},"state":"ACTIVE","etag":"1_e592c4a5-9354-464b-8859-577e916f31c3"}
+[debug] [2023-11-19T02:21:38.450Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites pageToken=&pageSize=10
+[debug] [2023-11-19T02:21:39.057Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites 200
+[debug] [2023-11-19T02:21:39.057Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites {"sites":[{"name":"projects/cutie-hacks-23/sites/cutie-hacks-23","defaultUrl":"https://cutie-hacks-23.web.app","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-19T02:21:39.057Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config [none]
+[debug] [2023-11-19T02:21:39.378Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config 200
+[debug] [2023-11-19T02:21:39.378Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config {"projectId":"cutie-hacks-23","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","storageBucket":"cutie-hacks-23.appspot.com","apiKey":"AIzaSyDEdk_G0fOj2WEs94heXNFzTYZGMn-FCdM","authDomain":"cutie-hacks-23.firebaseapp.com","messagingSenderId":"1053216282180","measurementId":"G-901MGK29GX"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] unhandledRejection ReferenceError: Headers is not defined
+    at Object.<anonymous> (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/web/spec-extension/adapters/headers.js:32:30)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.require (pkg/prelude/bootstrap.js:1851:31)
+    at Module.mod.require (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:102:18)
+
+[debug] [2023-11-19T02:21:43.091Z] Error: ENOENT: no such file or directory, open '/home/bryan/Documents/cutie-hacks-23/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-11-19T02:24:22.410Z] ----------------------------------------------------------------------
+[debug] [2023-11-19T02:24:22.411Z] Command:       /usr/local/bin/firebase /home/bryan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-11-19T02:24:22.411Z] CLI Version:   12.9.1
+[debug] [2023-11-19T02:24:22.411Z] Platform:      linux
+[debug] [2023-11-19T02:24:22.411Z] Node Version:  v16.16.0
+[debug] [2023-11-19T02:24:22.411Z] Time:          Sat Nov 18 2023 18:24:22 GMT-0800 (Pacific Standard Time)
+[debug] [2023-11-19T02:24:22.411Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-19T02:24:22.457Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-19T02:24:22.457Z] > authorizing via signed-in user (bryan.l.bergo@gmail.com)
+[debug] [2023-11-19T02:24:22.457Z] [iam] checking project cutie-hacks-23 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-11-19T02:24:22.459Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions [none]
+[debug] [2023-11-19T02:24:22.459Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions x-goog-quota-user=projects/cutie-hacks-23
+[debug] [2023-11-19T02:24:22.459Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:24:22.692Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions 200
+[debug] [2023-11-19T02:24:22.692Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cutie-hacks-23:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-11-19T02:24:22.693Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 [none]
+[debug] [2023-11-19T02:24:22.963Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 200
+[debug] [2023-11-19T02:24:22.963Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cutie-hacks-23 {"projectId":"cutie-hacks-23","projectNumber":"1053216282180","displayName":"BroncoSafe","name":"projects/cutie-hacks-23","resources":{"hostingSite":"cutie-hacks-23"},"state":"ACTIVE","etag":"1_33c9dbd3-b556-4566-b476-34caa9813699"}
+[debug] [2023-11-19T02:24:24.202Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites pageToken=&pageSize=10
+[debug] [2023-11-19T02:24:24.858Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites 200
+[debug] [2023-11-19T02:24:24.859Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/cutie-hacks-23/sites {"sites":[{"name":"projects/cutie-hacks-23/sites/cutie-hacks-23","defaultUrl":"https://cutie-hacks-23.web.app","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","type":"DEFAULT_SITE"}]}
+[debug] [2023-11-19T02:24:24.859Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config [none]
+[debug] [2023-11-19T02:24:25.291Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config 200
+[debug] [2023-11-19T02:24:25.291Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:1053216282180:web:3ddd4c3750582b1dd30e11/config {"projectId":"cutie-hacks-23","appId":"1:1053216282180:web:3ddd4c3750582b1dd30e11","storageBucket":"cutie-hacks-23.appspot.com","apiKey":"AIzaSyDEdk_G0fOj2WEs94heXNFzTYZGMn-FCdM","authDomain":"cutie-hacks-23.firebaseapp.com","messagingSenderId":"1053216282180","measurementId":"G-901MGK29GX"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] unhandledRejection ReferenceError: Headers is not defined
+    at Object.<anonymous> (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/web/spec-extension/adapters/headers.js:32:30)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module._compile (pkg/prelude/bootstrap.js:1890:32)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at Module.require (pkg/prelude/bootstrap.js:1851:31)
+    at Module.mod.require (/home/bryan/Documents/cutie-hacks-23/node_modules/next/dist/server/require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:102:18)
+
+[debug] [2023-11-19T02:24:28.652Z] Error: ENOENT: no such file or directory, open '/home/bryan/Documents/cutie-hacks-23/.next/server/middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.

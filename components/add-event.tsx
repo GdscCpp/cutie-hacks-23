@@ -15,6 +15,7 @@ export default function AddEventModal() {
       time: Date().toString(),
     });
 
+    // @ts-ignore
     document.getElementById("my_modal_1")?.close();
   };
 
@@ -22,6 +23,7 @@ export default function AddEventModal() {
     <>
       <button
         className="p-4 rounded-full bg-secondary text-white fixed bottom-14 right-10 border-none"
+        // @ts-ignore
         onClick={() => document.getElementById("my_modal_1")?.showModal()}
       >
         +
