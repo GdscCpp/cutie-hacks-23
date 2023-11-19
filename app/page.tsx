@@ -30,6 +30,7 @@ const pois = [
   },
 ];
 
+
 export default function Home() {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
